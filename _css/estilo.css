@@ -138,11 +138,40 @@ table#tabela_especificacoes {
    margin-left: auto;
    margin-right: auto;
    
+   text-align: right;
+   
 }
 
 table#tabela_especificacoes td {
     border: 1px solid #606060;
     padding: 10px;
+    vertical-align: middle;
+}
+
+table#tabela_especificacoes td.col_dir {
+    text-align: left;
+    background-color: #cecece;
+}
+
+table#tabela_especificacoes td.col_esq {
+    background-color: #606060;
+    color: #fff;
+    vertical-align: top;
+    font-weight: bold;
+}
+
+table#tabela_especificacoes caption{
+    color: #888888;
+    font-size: 13pt;
+    font-weight: bold;
+}
+
+table#tabela_especificacoes caption span {
+    display: block;
+    float: right;
+    color: #000;
+    font-size: 8pt;
+    margin-top: 10px;
 }
 
 aside#lateral {
