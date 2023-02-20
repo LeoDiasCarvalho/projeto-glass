@@ -2,12 +2,17 @@
 
 section#conteudo{
     width: 1000px;
+    font-size: 8px;
     
 }
 
 iframe#frame-spec{
-  width: 380px;
+  width: 400px;
   height: 280px;  
   border: none;
   overflow: hidden;
+}
+
+footer#rodape{
+    margin-top: 5px;
 }
