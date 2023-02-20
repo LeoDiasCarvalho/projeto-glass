@@ -40,32 +40,75 @@
                     </hgroup>
                 </header>
 
-                <form action="">
+                <form method="post" id="fContato" action="mailto:leodiascarvalhosr@gmail.com">
                     <fieldset id="usuario">
                         <legend>Indentificação do usuário</legend>
-                            <p><label for="idNome">Nome</label> <input type="text" name="txtNome" id="idNome" size="30" maxlength="30" placeholder="Nome Completo"></p>
-                            <p><label for="idSenha">Senha</label> <input type="password" name="txtSenha" id="idSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
-                            <p><label for="idEmail">E-mail</label> <input type="email" name="txtEmail" id="idEmail" size="30" maxlength="30" placeholder="Email"></p>
+                            <p><label for="idNome">Nome</label> 
+                                <input type="text" name="txtNome" id="idNome" size="30" maxlength="30" placeholder="Nome Completo">
+                            </p>
+                            <p><label for="idSenha">Senha</label> 
+                                <input type="password" name="txtSenha" id="idSenha" size="8" maxlength="8" placeholder="8 dígitos">
+                            </p>
+                            <p><label for="idEmail">E-mail</label> 
+                                <input type="email" name="txtEmail" id="idEmail" size="30" maxlength="30" placeholder="Email">
+                            </p>
                             <fieldset id="sexo">
                                 <legend>Sexo</legend>
-                                    <input type="radio" name="txtSexo" id="idMasc"><label for="idMasc">Masculino</label><br/>
-                                    <input type="radio" name="txtSexo" id="idFem"><label for="idFem">Feminino</label>
+                                    <input type="radio" name="txtSexo" id="idMasc">
+                                    <label for="idMasc">Masculino</label><br/>
+                                    <input type="radio" name="txtSexo" id="idFem">
+                                    <label for="idFem">Feminino</label>
                             </fieldset>
                             <p><label>Data de Nascimento</label> <input type="date" name="txtDataNasc" id="idDataNasc"></p>
                     </fieldset>
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
-                            <p><label>Logradouro</label> <input type="tex
-                                " name="txtLogradouro" id="idLogradouro" size="30" maxlength="30" placeholder="Logradouro"> <label>Número</label> <input type="number" name="txtNumero" id="idNumero" min="1" max="99999" placeholder="n°"></p>
-                            <p><label>Cidade</label> <input type="text" name="txtCidade" id="idCidade" size="30" maxlength="30" placeholder="Cidade"> <label>Estado</label> <input type="text" name="txtEstado" id="idEstado" size="20" maxlength="20" placeholder="Estado"></p>
+                            <p><label for="txtLogradouro">Logradouro</label> 
+                                <input type="tex
+                                " name="txtLogradouro" id="idLogradouro" size="30" maxlength="30" placeholder="Logradouro"> 
+                                <label for="txtNum">Número</label> 
+                                <input type="number" name="txtNumero" id="idNumero" min="1" max="99999" placeholder="n°">
+                            </p>
+                            <p><label for="txtCidade">Cidade</label> 
+                                <input type="text" name="txtCidade" id="idCidade" size="30" maxlength="30" placeholder="Cidade"> 
+                                <label for="txtEst">Estado</label> 
+                                <select name="txtEst" id="idEst">
+                                    <option value="null">Selecione um Estado</option>
+                                    <option value="acre">Acre</option>
+                                    <option value="alagoas">Alagoas</option>
+                                    <option value="amapa">Amapá</option>
+                                    <option value="amazonas">Amazonas</option>
+                                    <option value="bahia">Bahia</option>
+                                    <option value="ceara">Ceará</option>
+                                    <option value="distritoFederal">Distrito Federal</option>
+                                    <option value="espiritoSanto">Espirito Santo</option>
+                                    <option value="goias">Goiás</option>
+                                    <option value="maranhao">Maranhão</option>
+                                    <option value="matoGrosso">Mato Grosso</option>
+                                    <option value="matoGrossoDoSul">Mato Grosso do Sul</option>
+                                    <option value="minasGerais">Minas Gerais</option>
+                                    <option value="para">Pará</option>
+                                    <option value="paraiba">Paraíba</option>
+                                    <option value="parana">Paraná</option>
+                                    <option value="pernanbuco">Pernambuco</option>
+                                    <option value="piaui">Piauí</option>
+                                </select>
+                            </p>
                             
                             
                             
                 </fieldset>
                 <fieldset id="mensagem">
                     <legend>Mensagem do Usuário</legend>
-                        Grau de Urgência:
-                        Mensagem:
+                    <p>
+                        <label for="txtUrgencia">Grau de Urgência</label>
+                        <input type="range" name="txtUrgencia" id="idUrgencia" min="0" max="10">
+                    </p>
+                    <p>
+                        <label for="txtMsg">Mensagem<label>
+                            <textarea name="txtMsg" id="idMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagens"></textarea>
+                    </p>
+                        
                 </fieldset>
                 <fieldset id="pedido">
                     <legend>Quero um Google Glass</legend>
