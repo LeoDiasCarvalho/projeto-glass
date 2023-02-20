@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre Google Glass</title> 
     <link rel="stylesheet" href="/_css/estilo.css">
+    <link rel="stylesheet" href="/_css/form.css">
+    
+    <script src="/_javascript/funcoes.js"></script>
+    <script src="/_javascript/calculo.js"></script>
 </head>
 <body>
    <div id="interface">
@@ -40,7 +44,7 @@
                     </hgroup>
                 </header>
 
-                <form method="post" id="fContato" action="mailto:leodiascarvalhosr@gmail.com">
+                <form method="post" id="fContato" action="mailto:leodiascarvalhosr@gmail.com" >
                     <fieldset id="usuario">
                         <legend>Indentificação do usuário</legend>
                             <p><label for="idNome">Nome</label> 
@@ -50,10 +54,10 @@
                                 <input type="password" name="txtSenha" id="idSenha" size="8" maxlength="8" placeholder="8 dígitos">
                             </p>
                             <p><label for="idEmail">E-mail</label> 
-                                <input type="email" name="txtEmail" id="idEmail" size="30" maxlength="30" placeholder="Email">
+                                <input type="email" name="txtEmail" id="idEmail" size="20" maxlength="30" placeholder="Email">
                             </p>
                             <fieldset id="sexo">
-                                <legend>Sexo</legend>
+                                <legend id="sexo">Sexo</legend>
                                     <input type="radio" name="txtSexo" id="idMasc">
                                     <label for="idMasc">Masculino</label><br/>
                                     <input type="radio" name="txtSexo" id="idFem">
@@ -64,13 +68,16 @@
                     <fieldset id="endereco">
                         <legend>Endereço do Usuário</legend>
                             <p><label for="txtLogradouro">Logradouro</label> 
-                                <input type="tex
-                                " name="txtLogradouro" id="idLogradouro" size="30" maxlength="30" placeholder="Logradouro"> 
+                                <input type="text" name="txtLogradouro" id="idLogradouro" size="20" maxlength="40" placeholder="Logradouro">
+                            </p>
+                            <p> 
                                 <label for="txtNum">Número</label> 
                                 <input type="number" name="txtNumero" id="idNumero" min="1" max="99999" placeholder="n°">
                             </p>
                             <p><label for="txtCidade">Cidade</label> 
-                                <input type="text" name="txtCidade" id="idCidade" size="30" maxlength="30" placeholder="Cidade"> 
+                                <input type="text" name="txtCidade" id="idCidade" size="20" maxlength="30" placeholder="Cidade"> 
+                            </p>
+                            <p>
                                 <label for="txtEst">Estado</label> 
                                 <select name="txtEst" id="idEst">
                                     <option value="null">Selecione um Estado</option>
@@ -102,24 +109,36 @@
                     <legend>Mensagem do Usuário</legend>
                     <p>
                         <label for="txtUrgencia">Grau de Urgência</label>
-                        <input type="range" name="txtUrgencia" id="idUrgencia" min="0" max="10">
+                        Min <input type="range" name="txtUrgencia" id="idUrgencia" min="0" max="10"> Max
                     </p>
                     <p>
                         <label for="txtMsg">Mensagem<label>
-                            <textarea name="txtMsg" id="idMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagens"></textarea>
+                            <textarea name="txtMsg" id="idMsg" cols="35" rows="5" placeholder="Deixe aqui sua mensagens"></textarea>
                     </p>
                         
                 </fieldset>
                 <fieldset id="pedido">
                     <legend>Quero um Google Glass</legend>
-                        Gostaria de adquirir um Google Glass quando disponível
-                        Cor:
-                        Quantidade:
-                        Preço Total: R$
+                    <p>
+                        <input type="checkbox" name="txtPed" id="idPed">
+                        <label>Gostaria de adquirir um Google Glass</label>
+                    </p>
+                    <p>
+                        <label for="txtCor">Cor</label>
+                        <input type="color" name="txtCor" id="idCor">
+                    </p>
+                    <p>
+                        <label for="txtQuant">Quantidade:</label>
+                        <input type="number" name="txtQuant" id="idQuant" min="0" value="0" size="5" oninput="calcTotal();">
+                    </p>
+                    <p>
+                        <label for="txtPreco">Preço Total: R$</label>
+                        <input type="text" name="txtTotal" id="idTotal" placeholder="Total a Pagar" readonly>
+                    </p>          
                 </fieldset>
+                
+                <input type="button" id="btnEnviar" onclick="enviaForm()">
 
-
-                [BOTÃO ENVIAR]
                 </form>
 <footer id="rodape">
     <p>
@@ -130,6 +149,5 @@
     </p>
 </footer>
 </div>
-<script src="/_javascript/funcoes.js"></script>
 </body>
 </html>

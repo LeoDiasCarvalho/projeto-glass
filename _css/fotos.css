@@ -5,18 +5,19 @@ ul#album-fotos li span{
     color: #fff;
     text-shadow: 1px 1px 1px #000;
     background-color: rgba(0, 0, 0, .3);
-    font: 9pt;
+    font-size: 9pt;
     line-height: 350px;
     padding: 5px;
 }
 
 ul#album-fotos li:hover span{
     opacity: 1;
+   
 }
 
 ul#album-fotos li:hover{
     -webkit-transform: scale(1.5);
-    -webkit-transition: ;
+    -webkit-transition: 0.7s;
 }
 
 
