@@ -29,40 +29,55 @@
             </nav>
 
         </header>
+        <section id="corpo-full">
+            <article id="noticia_principal">
+                <header id="cabecalho_artigo">
+                    <hgroup>
+                        <h3>Fale Conosco > Contato</h3>
+                        <h1>Formulário de Contato</h1>
+                        <h2>por Leonardo Dias de Carvalho</h2>
+                        <h3 class="direita">Atualizado em 01/Maio/2013</h3>
+                    </hgroup>
+                </header>
 
-Fale Conosco > Contato
-Formulário de Contato
-por Gustavo Guanabara
-Atualizado em 01/Maio/2013
+                <form action="">
+                    <fieldset id="usuario">
+                        <legend>Indentificação do usuário</legend>
+                            <p><label for="idNome">Nome</label> <input type="text" name="txtNome" id="idNome" size="30" maxlength="30" placeholder="Nome Completo"></p>
+                            <p><label for="idSenha">Senha</label> <input type="password" name="txtSenha" id="idSenha" size="8" maxlength="8" placeholder="8 dígitos"></p>
+                            <p><label for="idEmail">E-mail</label> <input type="email" name="txtEmail" id="idEmail" size="30" maxlength="30" placeholder="Email"></p>
+                            <fieldset id="sexo">
+                                <legend>Sexo</legend>
+                                    <input type="radio" name="txtSexo" id="idMasc"><label for="idMasc">Masculino</label><br/>
+                                    <input type="radio" name="txtSexo" id="idFem"><label for="idFem">Feminino</label>
+                            </fieldset>
+                            <p><label>Data de Nascimento</label> <input type="date" name="txtDataNasc" id="idDataNasc"></p>
+                    </fieldset>
+                    <fieldset id="endereco">
+                        <legend>Endereço do Usuário</legend>
+                            <p><label>Logradouro</label> <input type="tex
+                                " name="txtLogradouro" id="idLogradouro" size="30" maxlength="30" placeholder="Logradouro"> <label>Número</label> <input type="number" name="txtNumero" id="idNumero" min="1" max="99999" placeholder="n°"></p>
+                            <p><label>Cidade</label> <input type="text" name="txtCidade" id="idCidade" size="30" maxlength="30" placeholder="Cidade"> <label>Estado</label> <input type="text" name="txtEstado" id="idEstado" size="20" maxlength="20" placeholder="Estado"></p>
+                            
+                            
+                            
+                </fieldset>
+                <fieldset id="mensagem">
+                    <legend>Mensagem do Usuário</legend>
+                        Grau de Urgência:
+                        Mensagem:
+                </fieldset>
+                <fieldset id="pedido">
+                    <legend>Quero um Google Glass</legend>
+                        Gostaria de adquirir um Google Glass quando disponível
+                        Cor:
+                        Quantidade:
+                        Preço Total: R$
+                </fieldset>
 
-Identificação do Usuário
-    Nome:
-    Senha:
-    E-mail:
-    Sexo:
-        - Masculino
-        - Feminino
-    Data de Nascimento:
 
-Endereço do Usuário
-    Logradouro:
-    Número:
-    Estado:
-    Cidade:
-
-Mensagem do Usuário
-    Grau de Urgência:
-    Mensagem:
-
-Quero um Google Glass
-    Gostaria de adquirir um Google Glass quando disponível
-    Cor:
-    Quantidade:
-    Preço Total: R$
-
-
-[BOTÃO ENVIAR]
-
+                [BOTÃO ENVIAR]
+                </form>
 <footer id="rodape">
     <p>
         Copyright &copy; 2013 - by Léo Dias<br/>
