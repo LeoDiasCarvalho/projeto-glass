@@ -23,3 +23,18 @@ video#filme{
     width: 440px;
 
 }
+
+video#filme2{
+    display: block;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 440px;   
+}
+
+video#filme3{
+    display: block;
+    position: relative;
+    width: 350px;
+}
+
